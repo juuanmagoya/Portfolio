@@ -1,8 +1,11 @@
 import perfilImg from '../../assets/images/imgPerfil.jpeg';
+// Importar los PDFs
+import cvDesarrollador from '../../assets/JuanAguirreFullStack.pdf';
+import cvAnalista from '../../assets/JuanAguirreATF.pdf';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-16 relative overflow-hidden">
+    <section id="home" className="min-h-screen flex items-center pt-16 relative overflow-visible">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center py-12">
         
         {/* Columna Izquierda - Texto */}
@@ -27,7 +30,7 @@ const Hero = () => {
 
           {/* Descripción */}
           <p className="text-gray-400 max-w-xl text-lg leading-relaxed">
-            Especializado en desarollo web con PHP/Laravel y análisis funcional.
+            Especializado en desarrollo web con PHP/Laravel y análisis funcional.
             Convierto requerimientos de negocio en software robusto, escalable y mantenible.
             <span className="block mt-3 text-[#06B6D4] font-medium">Entiendo el problema antes de escribir código.</span>
           </p>
@@ -38,14 +41,47 @@ const Hero = () => {
               <span>Ver proyectos</span>
               <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-300"></i>
             </a>
+            
             <a href="#contact" className="btn-secondary group">
               <i className="fas fa-envelope mr-2"></i>
               <span>Contactarme</span>
             </a>
-            <a href="/assets/CV-JuanManuelAguirre.pdf" download className="btn-secondary group">
-              <i className="fas fa-download mr-2"></i>
-              <span>Descargar CV</span>
-            </a>
+  
+            {/* Dropdown de CV */}
+            <div className="relative inline-block group">
+              <button className="btn-secondary group">
+                <i className="fas fa-download mr-2"></i>
+                <span>Descargar CV</span>
+                <i className="fas fa-chevron-down ml-2 text-xs transition-transform duration-300 group-hover:rotate-180"></i>
+              </button>
+              
+              {/* Menú desplegable */}
+              <div className="absolute top-full left-0 mt-2 w-64 bg-[#1E293B] border border-gray-700 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <a 
+                  href={cvDesarrollador}
+                  download
+                  className="flex items-center gap-3 px-4 py-3 text-sm text-gray-300 hover:bg-linear-to-r hover:from-[#06B6D4]/20 hover:to-transparent hover:text-white rounded-t-xl transition-all duration-300"
+                >
+                  <i className="fas fa-laptop-code text-[#06B6D4] w-5"></i>
+                  <div className="text-left">
+                    <p className="font-medium">Perfil Desarrollador</p>
+                    <p className="text-xs text-gray-500">Laravel · PHP · React</p>
+                  </div>
+                </a>
+                <div className="border-t border-gray-700"></div>
+                <a 
+                  href={cvAnalista}
+                  download
+                  className="flex items-center gap-3 px-4 py-3 text-sm text-gray-300 hover:bg-linear-to-r hover:from-[#7C3AED]/20 hover:to-transparent hover:text-white rounded-b-xl transition-all duration-300"
+                >
+                  <i className="fas fa-chart-line text-[#7C3AED] w-5"></i>
+                  <div className="text-left">
+                    <p className="font-medium">Perfil Analista</p>
+                    <p className="text-xs text-gray-500">Requerimientos · UML · SCRUM</p>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -83,7 +119,15 @@ const Hero = () => {
         </div>
       </div>
       
-      
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#skills" className="flex flex-col items-center group">
+          <span className="text-sm text-gray-400 mb-2 group-hover:text-[#06B6D4] transition-colors duration-300">Scroll</span>
+          <div className="w-6 h-10 border-2 border-gray-600 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-[#06B6D4] rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </a>
+      </div>
     </section>
   );
 };
