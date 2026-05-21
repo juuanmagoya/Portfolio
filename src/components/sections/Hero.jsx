@@ -1,3 +1,5 @@
+import perfilImg from '../../assets/images/imgPerfil.jpeg';
+
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center pt-16 relative overflow-hidden">
@@ -61,7 +63,7 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-full border-4 border-[#06B6D4]/50"></div>
               {/* Imagen */}
               <img 
-                src="src/assets/images/imgPerfil.jpeg" 
+                src={perfilImg} 
                 alt="Foto de perfil Juanma Aguirre"
                 className="w-full h-full object-cover"
               />
