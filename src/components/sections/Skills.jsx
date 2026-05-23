@@ -8,12 +8,16 @@ const Skills = () => {
         { name: "HTML5", icon: "fab fa-html5", color: "text-orange-500", category: "Maquetado" },
         { name: "CSS3", icon: "fab fa-css3-alt", color: "text-blue-500", category: "Estilos" },
         { name: "JavaScript", icon: "fab fa-js-square", color: "text-yellow-400", category: "Frontend" },
+        { name: "React", icon: "fab fa-react", color: "text-cyan-400", category: "Frontend Library" }, // NUEVO
+        { name: "TypeScript", icon: "fab fa-js", color: "text-blue-600", category: "Tipado estático" },
+        { name: "Next.js", icon: "fas fa-server", color: "text-gray-300", category: "React Framework" }, // NUEVO
         { name: "PHP", icon: "fab fa-php", color: "text-purple-500", category: "Backend" },
         { name: "Laravel", icon: "fab fa-laravel", color: "text-red-500", category: "Framework PHP" },
         { name: "MySQL", icon: "fas fa-database", color: "text-blue-400", category: "BD Relacional" },
         { name: "PostgreSQL", icon: "fas fa-database", color: "text-sky-400", category: "BD Avanzada" },
+        { name: "Supabase", icon: "fas fa-fire", color: "text-emerald-400", category: "Backend as a Service" }, // NUEVO
         { name: "API RESTful", icon: "fas fa-plug", color: "text-green-400", category: "Arquitectura" },
-        { name: "Postman", icon: "fas fa-flask", color: "text-orange-500", category: "Testing APIs" }, // Icono cambiado
+        { name: "Postman", icon: "fas fa-flask", color: "text-orange-500", category: "Testing APIs" },
         { name: "Pest", icon: "fas fa-check-double", color: "text-green-500", category: "Testing PHP" },
         { name: "Tailwind", icon: "fas fa-paint-brush", color: "text-cyan-400", category: "Framework CSS", customIcon: true, imgSrc: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" },
         { name: "Livewire", icon: "fas fa-bolt", color: "text-pink-500", category: "Fullstack Laravel" },
@@ -44,7 +48,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 relative">
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-[#0F172A]/10 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#0F172A]/10 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-6 relative">
         
         {/* Encabezado de la sección */}
@@ -64,7 +68,7 @@ const Skills = () => {
                 Desarrollo Web
               </h3>
             </div>
-            <div className="ml-3 flex-1 h-0.5 bg-linear-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+            <div className="ml-3 flex-1 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
@@ -101,7 +105,7 @@ const Skills = () => {
                 Análisis Funcional
               </h3>
             </div>
-            <div className="ml-3 flex-1 h-0.5 bg-linear-to-r from-purple-500 to-pink-500 rounded-full"></div>
+            <div className="ml-3 flex-1 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
           </div>
           
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
